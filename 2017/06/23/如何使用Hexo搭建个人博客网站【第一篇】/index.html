@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          新文章 - 曹威的博客 | 和你一起学习、思考、成长
+          如何使用Hexo搭建自己的博客网站【第一篇】 - 曹威的博客 | 和你一起学习、思考、成长
         
     </title>
 
-    <link rel="canonical" href="http://yoursite-url/2017/06/12/wei/">
+    <link rel="canonical" href="http://yoursite-url/2017/06/23/如何使用Hexo搭建个人博客网站【第一篇】/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -88,12 +88,14 @@
                             
                               <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
                             
+                              <a class="tag" href="/tags/#博客" title="博客">博客</a>
+                            
                         </div>
-                        <h1>新文章</h1>
-                        <h2 class="subheading">新文章用来测试</h2>
+                        <h1>如何使用Hexo搭建自己的博客网站【第一篇】</h1>
+                        <h2 class="subheading">人人都能学会的自建博客网站教程</h2>
                         <span class="meta">
                             Posted by Caowei on
-                            2017-06-12
+                            2017-06-23
                         </span>
                     </div>
                 
@@ -140,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">归档</a>
+                            <a href="/about/">关于我</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">关于我</a>
+                            <a href="/archive/">归档</a>
                         </li>
                         
                     
@@ -210,71 +212,69 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <blockquote>
-<p>Ported Theme of <a href="https://github.com/Huxpro/huxpro.github.io" target="_blank" rel="external">Hux Blog</a>, Thank <a href="https://github.com/Huxpro" target="_blank" rel="external">Huxpro</a> for designing such a flawless theme.</p>
-<p>This BeanTech theme created by <a href="http://beantech.org" target="_blank" rel="external">YuHsuan</a> modified from the original Porter <a href="http://kaijun.rocks/hexo-theme-huxblog/" target="_blank" rel="external">Kaijun</a></p>
+                <h1 id="写在前面">写在前面</h1>
+<hr>
+<p>相信很多同学都曾想过搭建一个属于自己的博客网站，闲暇时写一写博客，我很早就想搭建一个自己的博客网站了，起初是想自己写代码开发一个，后来发现成本实在太高，不仅需要时间，还要过硬的开发技术。直到有一天，我遇到了Hexo这个开源的博客框架，如获至宝，于是便迅速着手开始搭建。可能是我把这件事想的太简单了，过程中遇到了无数个坑，折腾了许久才最终完成。</p>
+<p>不得不说，我自己还稍有一点开发基础，但在使用Hexo搭建博客的过程中，有很多新概念也是第一次接触到，有很多问题也是摸索了很久才找到解决方法。作为一款开源框架，Hexo是非常优秀的，但对他的使用者来说却并不友好，我大概遍历了一下网上能够找到的教程，发现即使很多有软件开发功底的同学也是碰到了不少坑，各种奇奇怪怪的坑，把大家折腾的怪难受的。这只能说Hexo的产品化程度还不够高，用户体验有待完善。</p>
+<p>在我将自己的博客搭好之后，决定写下教程，希望能让后来有兴趣搭建博客的同学少走一些弯路。本篇教程分为三篇，分阶段去达成我们的目标。<br>
+我会将教程写的非常详细，主要面向0基础的同学，甚至连Hexo是什么都不了解的同学也能通过本教程的学习最终能成功搭建自己的个人博客。</p>
+<p>闲话少叙，如果你是已经成功搭建了博客，可以参看第二、三篇文章对自己的博客进行优化：</p>
+<blockquote>
+<p><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第二篇】</a></p>
+<p><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第二篇】</a></p>
 </blockquote>
-<h1 id="live"><a href="http://beantech.org" target="_blank" rel="external">Live</a></h1>
+<h1 id="教程宗旨">教程宗旨</h1>
 <hr>
-<p><img src="http://beantech.org/img/beantech-desktop.png" alt="BeanTech"></p>
-<h1 id="usage">Usage</h1>
+<p>本教程是我自己在搭建过程中遇到问题，解决问题的过程。作为第一版本的教程，他是不完善的，也不会面面俱到，当然会有很多需要完善的地方，针对这一点我之后会找到很多小白同学，尤其是没有软件基础知识的同学，让他们按照本教程一步步去实践，我会在过程中不断询问他们的意见，接收用户的反馈，不断优化完善，提升阅读的体验，最终迭代升级为一个具有普适意义的教程。同时也希望更多的同学能够通过本教程搭建自己的个人博客网站，一起学习知识、分享经验。</p>
+<h1 id="名词解释">名词解释</h1>
 <hr>
-<p>I publish the whole project for your convenience, so you can just follow the instruction down below, then you can easily customiz your own blog!</p>
-<p>Let’s begin!!!</p>
-<h2 id="init">Init</h2>
+<p>对于没有软件基础知识的同学，首先要明确一些基本概念，就是接下来用到的这些工具是什么。你也可以先不急着看这个部分，等到后面的安装中有不理解的时候，再回过头来查阅。<br>
+<strong>1.Hexo</strong><br>
+一款非常好用的博客框架，运行速度快，开源免费。</p>
+<blockquote>
+<p>可能有的同学不太了解框架的概念，这里可将Hexo简单理解为一个打包好的软件，像安装QQ一样按照他的特定步骤安装好以后可以免费使用</p>
+</blockquote>
+<p><strong>2.Github</strong><br>
+一个面向开源及私有软件项目的托管平台，也是全网最大男性同性交友社区。</p>
+<blockquote>
+<p>这里可简单理解为一台云服务器，我们可以把自己博客网站的代码部署在上面，二十四小时不停地运行，让别人可以访问你的博客</p>
+</blockquote>
+<p><strong>3.Git</strong><br>
+Git是一款免费、开源的分布式版本控制系统</p>
+<blockquote>
+<p>这里可简单理解为搬运工，帮我们从Github云服务器上把Hexo搬到自己的电脑上，等你把Hexo在自己的电脑上配置好以后，再帮你搬到Github</p>
+</blockquote>
+<p><strong>4.Node.js</strong><br>
+Node.js是JavaScript代码的运行环境，基于chrome V8引擎</p>
+<blockquote>
+<p>这里可将整个网站代码整体理解成一列火车，火车只能在铁轨上运行，Node.js就相当于那一条铁轨</p>
+</blockquote>
+<h1 id="在电脑本地搭建网站">在电脑本地搭建网站</h1>
 <hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/YenYuHsuan/hexo-theme-beantech.git ./hexo-beantech</div><div class="line"><span class="built_in">cd</span> hexo-beantech</div><div class="line">npm install</div></pre></td></tr></table></figure>
-<h2 id="modify">Modify</h2>
-<hr>
-<p>Modify <code>_config.yml</code> file with your own info.<br>
-Especially the section:</p>
-<h2 id="deploy">Deploy</h2>
-<p>Replace to your own repo!</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&lt;yourAccount&gt;/&lt;repo&gt;</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">&lt;your-branch&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="sidebar">Sidebar</h2>
-<p>Copy your avatar image to <code>&lt;root&gt;/img/</code> and modify the <code>_config.yml</code>:</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">sidebar:</span> <span class="literal">true</span>    <span class="comment"># whether or not using Sidebar.</span></div><div class="line"><span class="attr">sidebar-about-description:</span> <span class="string">"&lt;your description&gt;"</span></div><div class="line"><span class="attr">sidebar-avatar:</span> <span class="string">img/&lt;your</span> <span class="string">avatar</span> <span class="string">path&gt;</span></div></pre></td></tr></table></figure>
-<p>and activate your personal widget you like</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="attr">widgets:</span>         <span class="comment"># here are widget you can use, you can comment out</span></div><div class="line"><span class="bullet">-</span> <span class="string">featured-tags</span></div><div class="line"><span class="bullet">-</span> <span class="string">short-about</span></div><div class="line"><span class="bullet">-</span> <span class="string">recent-posts</span></div><div class="line"><span class="bullet">-</span> <span class="string">friends-blog</span></div><div class="line"><span class="bullet">-</span> <span class="string">archive</span></div><div class="line"><span class="bullet">-</span> <span class="string">category</span></div></pre></td></tr></table></figure>
-<p>if you want to add sidebar widget, please add at <code>layout/_widget</code>.</p>
-<h2 id="signature">Signature</h2>
-<p>Copy your signature image to <code>&lt;root&gt;/img/signature</code> and modify the <code>_config.yml</code>:</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">signature:</span> <span class="literal">true</span>   <span class="comment"># show signature</span></div><div class="line"><span class="attr">signature-img:</span> <span class="string">img/signature/&lt;your-signature-ID&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="go-to-top">Go to top</h2>
-<p>My icon is using iron man, you can change to your own icon at <code>css/image</code>.</p>
-<h2 id="post">Post</h2>
-<p>You can decide to show post tags or not.</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">home_posts_tag:</span> <span class="literal">true</span></div></pre></td></tr></table></figure>
-<p><img src="home_posts_tag-true.png" alt="home_posts_tag-true"></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">home_posts_tag:</span> <span class="literal">false</span></div></pre></td></tr></table></figure>
-<p><img src="home_posts_tag-false.png" alt="home_posts_tag-false"></p>
-<h2 id="markdown">Markdown</h2>
-<p>My markdown render engine plugin is <a href="https://github.com/celsomiranda/hexo-renderer-markdown-it" target="_blank" rel="external">hexo-renderer-markdown-it</a>.</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Markdown-it config</span></div><div class="line"><span class="comment">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</span></div><div class="line"><span class="attr">markdown:</span></div><div class="line"><span class="attr">  render:</span></div><div class="line"><span class="attr">    html:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    xhtmlOut:</span> <span class="literal">false</span></div><div class="line"><span class="attr">    breaks:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    linkify:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    typographer:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    quotes:</span> <span class="string">'“”‘’'</span></div></pre></td></tr></table></figure>
-<p>and if you want to change the header anchor ‘ℬ’, you can go to <code>layout/post.ejs</code> to change it.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">async</span>(<span class="string">"https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        anchors.options = &#123;</div><div class="line">          <span class="attr">visible</span>: <span class="string">'hover'</span>,</div><div class="line">          <span class="attr">placement</span>: <span class="string">'left'</span>,</div><div class="line">          <span class="attr">icon</span>: ℬ <span class="comment">// this is the header anchor "unicode" icon</span></div><div class="line">        &#125;;</div></pre></td></tr></table></figure>
-<h2 id="hexo-basics">Hexo Basics</h2>
-<hr>
-<p>Some hexo command:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo new post <span class="string">"&lt;post name&gt;"</span> <span class="comment"># you can change post to another layout if you want</span></div><div class="line">hexo clean &amp;&amp; hexo generate <span class="comment"># generate the static file</span></div><div class="line">hexo server <span class="comment"># run hexo in local environment</span></div><div class="line">hexo deploy <span class="comment"># hexo will push the static files automatically into the specific branch(gh-pages) of your repo!</span></div></pre></td></tr></table></figure>
-<h1 id="have-fun-_">Have fun ^_^</h1>
-<hr>
-<!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-<!-- Place this tag where you want the button to render. -->
-<p>Please <a class="github-button" href="https://github.com/YenYuHsuan/hexo-theme-beantech" data-icon="octicon-star" aria-label="Star YenYuHsuan/hexo-theme-beantech on GitHub" target="_blank" rel="external">Star</a> this Project if you like it! <a class="github-button" href="https://github.com/YenYuHsuan" aria-label="Follow @YenYuHsuan on GitHub" target="_blank" rel="external">Follow</a> would also be appreciated!<br>
-Peace!</p>
-<p><img src="http://orc7nt6tu.bkt.clouddn.com/header.jpg" alt="home_posts_tag-false"></p>
+<p>首先要将博客网站在你自己的电脑上安装好，并调试好，成功以后再将本地安装好的网站部署到云服务器上，也就是github上。博客网站就是一个小软件，任何人想要查看的时候都可以通过浏览器的域名从云端的服务器上载入这个程序，这样就可以很方便的从电脑和手机上看到你的网站了。</p>
+<p>这里我以 <code>Windows 64位</code> 的系统为例讲解如何在电脑本地搭建（注：下面所提供的软件下载地址都是64位的软件）。</p>
+<h2 id="搭建本地环境">搭建本地环境</h2>
+<p>本地环境搭建需要安装两个软件：Node.js+Git<br>
+这两款软件在Windows系统上都是客户端，安装方法就是不断的点击下一步，直到安装成功。</p>
+<h3 id="安装nodejs">安装Node.js</h3>
+<ul>
+<li><a href="http://pan.baidu.com/s/1jIbuV9G" target="_blank" rel="external">下载地址：node-v6.10.3-x64.msi</a></li>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="external">官方下载下载地址</a><br>
+安装方法非常简单，一路点击下一步，默认安装在C盘，不用修改安装的位置，文件本身不大，只有12M。如下图所示；<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-node-01.PNG" alt="Node.js安装过程截图"><br>
+安装完成以后，检查是否真的安装成功。<code>Win+R</code>快捷键调出运行窗口，在运行窗口中输入 <code>cmd</code> ，如下图所示:<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-node-02.PNG" alt="运行命令窗口截图"><br>
+在输入 <code>cmd</code> 敲击回车键以后，则会出现命令行操作的窗口，此时需要在命令行窗口中先后输入两个命令：</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">node</span> <span class="bullet">-v</span></div><div class="line"><span class="string">npm</span> <span class="bullet">-v</span></div></pre></td></tr></table></figure>
+<p>分别出现如下图中所示的 <code>v6.10.3</code> 及 <code>3.10.10</code> 的版本号，说明安装成功，如果没有出现，请重复以上过程直到安装成功：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-node-03.PNG" alt="cmd命令窗口截图"></p>
 
 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
-                    
-                        <li class="previous">
-                            <a href="/2017/06/12/123/" data-toggle="tooltip" data-placement="top" title="用来测试的新文章">&larr; Previous Post</a>
-                        </li>
                     
                     
                         <li class="next">
@@ -308,7 +308,7 @@ Peace!</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#live"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Live</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#usage"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Usage</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#init"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Init</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#modify"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Modify</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#deploy"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Deploy</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#sidebar"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Sidebar</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#signature"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Signature</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#go-to-top"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">Go to top</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#post"><span class="toc-nav-number">2.7.</span> <span class="toc-nav-text">Post</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#markdown"><span class="toc-nav-number">2.8.</span> <span class="toc-nav-text">Markdown</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-basics"><span class="toc-nav-number">2.9.</span> <span class="toc-nav-text">Hexo Basics</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#have-fun-_"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Have fun ^_^</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#写在前面"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#教程宗旨"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">教程宗旨</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#名词解释"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">名词解释</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#在电脑本地搭建网站"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">在电脑本地搭建网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#搭建本地环境"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">搭建本地环境</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装nodejs"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">安装Node.js</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -329,6 +329,8 @@ Peace!</p>
                     <div class="tags">
                        
                           <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+                        
+                          <a class="tag" href="/tags/#博客" title="博客">博客</a>
                         
                     </div>
                 </section>
@@ -363,8 +365,8 @@ Peace!</p>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "your-disqus-ID";
-    var disqus_identifier = "http://yoursite-url/2017/06/12/wei/";
-    var disqus_url = "http://yoursite-url/2017/06/12/wei/";
+    var disqus_identifier = "http://yoursite-url/2017/06/23/如何使用Hexo搭建个人博客网站【第一篇】/";
+    var disqus_url = "http://yoursite-url/2017/06/23/如何使用Hexo搭建个人博客网站【第一篇】/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
