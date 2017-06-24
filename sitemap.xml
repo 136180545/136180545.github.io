@@ -2,17 +2,17 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <sitemap>
-        <loc>http://yoursite-url/post-sitemap.xml</loc>
+        <loc>http://caowei.co/post-sitemap.xml</loc>
         <lastmod>2017-06-24T16:03:07.180Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://yoursite-url/page-sitemap.xml</loc>
+        <loc>http://caowei.co/page-sitemap.xml</loc>
         <lastmod>2017-06-13T07:15:07.323Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://yoursite-url/tag-sitemap.xml</loc>
+        <loc>http://caowei.co/tag-sitemap.xml</loc>
         <lastmod>2017-06-24T16:03:07.180Z</lastmod>
     </sitemap>
 
