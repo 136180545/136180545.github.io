@@ -226,7 +226,6 @@
 <ul>
 <li><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第二篇】</a></li>
 <li><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第三篇】</a></li>
-<li><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第四篇】</a></li>
 </ul>
 <h1 id="教程宗旨">教程宗旨</h1>
 <hr>
@@ -353,15 +352,63 @@ Tips：这里的安装过程是很容易掉到坑里去的，虽然安装只是�
 <p>这里需要注意的是可能你的电脑的4000端口已被占用，常见的占用4000端口的软件有福昕阅读器，此时你只要切换一个端口就行了，执行以下命令可以切换端口为5000：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">hexo</span> <span class="string">server</span> <span class="bullet">-p</span> <span class="number">5000</span></div></pre></td></tr></table></figure>
 <p>在浏览器的地址栏中输入 <code>localhost：5000</code> 就可以看到你的博客页面了。</p>
+<h1 id="将本地搭好的网站部署到github">将本地搭好的网站部署到Github</h1>
+<hr>
+<p>本地搭建好博客，只成功了一半，若想要更多的人能够访问你的博客，则需要将在本地搭建好的博客文件部署到云服务器上，也就是github上。</p>
+<h2 id="配置github">配置Github</h2>
+<hr>
+<p>Github是一台二十四小时运转的云服务器，我们要先注册账号，并新建我们博客代码文件的仓库。github给每一位用户的免费使用空间是300M，300M的空间足够存放博客的代码文件了。</p>
+<p>1.首先打开<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a>网站，注册github，github虽然是纯英文网站，但仅仅只是语言不同，登录注册的流程是使用的方法与其他网站没有区别，按照步骤使用邮箱注册并激活即可。<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-github-01.PNG" alt="github配置过程截图01"><br>
+2.创建一个代码仓库，如下图，点击 <code>+</code> 再选择 <code>New repository</code><br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-github-02.png" alt="github配置过程截图02"><br>
+3.来到创建仓库的页面，如下图，这里有一个最重要的点就是，<strong>仓库名必须是你的：<a href="http://xn--eqr924avxo.github.io" target="_blank" rel="external">用户名.github.io</a></strong>，就是之前注册时的Username，写法按照这样 <code>username.github.io</code> ，要是不记得你的用户名可以点击你的头像，找到下拉列表里的 <code>Signed in as</code> 后面的就是你的用户名，然后写上一点仓库的描述，如“Blog仓库”，勾选READEM，再点击创建：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-github-03.png" alt="github配置过程截图03"><br>
+4.创建成功会跳转到仓库的页面，点击 <code>Settings</code> 会跳转到设置页面：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-github-04.png" alt="github配置过程截图04"><br>
+5.往下滚动设置页面，直到看到 <code>Github Pages</code> 可以看到你的网页已经发布在了你刚刚创建的仓库域名上，如果没有成功出现，则需要等待2分钟左右的时间：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-github-05.jpg" alt="github配置过程截图05"><br>
+此时的域名就是你刚刚创建的仓库所生成的网页，你之后就可以通过任意一台电脑或者手机上输入图的域名访问你的网站了，到此github的配置就结束了，是不是也很简单呢？</p>
+<h2 id="配置git">配置Git</h2>
+<hr>
+<p>刚刚我们只是安装好了git，并没有配置git，这一步我们实现Git的配置，因为Git作为你的代码搬运工，你必须给git打开你电脑的代码仓库和github仓库的钥匙是吧。</p>
+<p>1.设置Git的用户名和email，在Git的命令窗口中输入如下两行命令,注意引号和name之间的空格，否则设置不成功，email必须填写你注册github时的email账号，否则设置不成功：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">git</span> <span class="string">config</span> <span class="bullet">--global</span> <span class="string">user.name</span> <span class="string">"Your name"</span></div><div class="line"><span class="string">git</span> <span class="string">config</span> <span class="bullet">--global</span> <span class="string">user.email</span> <span class="string">"email"</span></div></pre></td></tr></table></figure>
+<p>出现下图所示，则说明已经设置成功：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-github-06.PNG" alt="github配置过程截图06"><br>
+2.生成属于你的密钥，在Git中接着输入以下命令，填写你注册github时的email账号，连续敲击三次回车：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">ssh-keygen</span> <span class="bullet">-t</span> <span class="string">rsa</span> <span class="bullet">-C</span> <span class="string">"email"</span></div></pre></td></tr></table></figure>
+<p>密钥会自动生成，出现如下图所示的结果，Git的配置便到此结束了：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-github-07.PNG" alt="github配置过程截图07"></p>
+<h2 id="配置博客yml文件">配置博客yml文件</h2>
+<hr>
+<p>要想成功将代码部署到github，最后一步还需要将博客文件里的yml配置文件进行一下修改，这个文件在你创建的 <code>Hexo</code> 文件夹中，找到它，右击选择用记事本打开，找到文件中的如下代码，可是使用 <code>Ctrl+F</code> 快速搜索 <code>Deployment</code><br>
+这里我使用的不是记事本打开的yml文件，而是使用了另一款代码编辑器<a href="http://pan.baidu.com/s/1i4GyrY1" target="_blank" rel="external">Atom</a>，这款编辑器非常好用，可以用来书写markdown文件。</p>
+<p>找到deploy后，按照如下格式修改配置：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">deploy：</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/630764771/630764771.github.io</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div></pre></td></tr></table></figure>
+<p>这里的格式要求很严格， <code>type</code> <code>repo</code> <code>branch</code> 后面都必须要空一格， <code>type</code> 和 <code>branch</code> 后面按照上面的填写，而 <code>repo</code> 则要填写你的github仓库的地址，如下图：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-github-08.png" alt="github配置过程截图08"></p>
+<h2 id="部署博客">部署博客</h2>
+<hr>
+<p>操作了这么久，终于到了最后一步，将代码部署到github上</p>
+<p>1.部署之前先安装一个扩展，如果遗忘，将会导致部署不成功，在Git命令窗口中输入如下命令：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-deployer-git</span> <span class="bullet">--save</span></div></pre></td></tr></table></figure>
+<p>2.按照如下顺序，执行在Git命令窗口中执行如下命令：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">hexo</span> <span class="string">clean</span></div><div class="line"><span class="string">hexo</span> <span class="string">g</span></div><div class="line"><span class="string">hexo</span> <span class="string">d</span></div></pre></td></tr></table></figure>
+<p>然后耐心等待部署，中间会让你输入github的注册邮箱和登录密码：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-github-09.PNG" alt="github配置过程截图09"><br>
+下图即为部署成功以后的样子：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-github-10.PNG" alt="github配置过程截图10"><br>
+再看看你的github仓库，是不是多了很多文件呢，这些文件就是你的博客代码文件，现在你已经成功的部署了你的第一个博客网站：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-github-11.PNG" alt="github配置过程截图11"><br>
+此时，你便可以通过任意一台电脑或者手机的浏览器访问你的网站了，域名就是 <a href="http://username.github.io" target="_blank" rel="external">username.github.io</a><br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-github-12.png" alt="github配置过程截图12"></p>
 <h1 id="后记">后记</h1>
 <hr>
-<p>到此为止，我们就完成了本地博客的安装，这里我们仅仅只是在你自己的电脑上装好了博客网站，第二篇将教会大家如何将网站部署到云服务器，也就是github上，让每个人都能访问你的博客。</p>
+<p>到此为止，我们就完成了博客从安装到部署，但这也只是完成了其中的一半而已，第二篇文章将教大家如何更改自己的主题，如何绑定自己的个性域名等等。</p>
 <ul>
 <li><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第二篇】</a></li>
 </ul>
-<p>总结一下之后将会常用到的本地调试步骤：<br>
-之后频繁更新博客的文章，那么在文章发布之前我们需要在本地的电脑上预览一下博客写出来的效果，就需要频繁的用到下列步骤：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">hexo</span> <span class="string">clean</span>     <span class="string">//清除缓存</span></div><div class="line"><span class="string">hexo</span> <span class="string">g</span>         <span class="string">//生成静态文件</span></div><div class="line"><span class="string">hexo</span> <span class="string">s</span>         <span class="string">//启动本地服务器</span></div></pre></td></tr></table></figure>
 <p>如有更多的问题，请添加下面的QQ群交流：<br>
 <img src="http://orc7nt6tu.bkt.clouddn.com/Hexo%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="github配置过程截图13"></p>
 
@@ -399,7 +446,7 @@ Tips：这里的安装过程是很容易掉到坑里去的，虽然安装只是�
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#写在前面"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#适用人群"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">适用人群</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其他教程"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">其他教程</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#教程宗旨"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">教程宗旨</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#名词解释"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">名词解释</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#在电脑本地搭建网站"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">在电脑本地搭建网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#搭建本地环境"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">搭建本地环境</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装nodejs"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">安装Node.js</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装git"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">安装Git</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#在本地安装博客"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">在本地安装博客</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装hexo"><span class="toc-nav-number">4.2.1.</span> <span class="toc-nav-text">安装Hexo</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置hexo"><span class="toc-nav-number">4.2.2.</span> <span class="toc-nav-text">配置Hexo</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#在本地调试博客"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">在本地调试博客</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装本地服务器"><span class="toc-nav-number">4.3.1.</span> <span class="toc-nav-text">安装本地服务器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#本地调试博客"><span class="toc-nav-number">4.3.2.</span> <span class="toc-nav-text">本地调试博客</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#后记"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">后记</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#写在前面"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#适用人群"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">适用人群</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其他教程"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">其他教程</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#教程宗旨"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">教程宗旨</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#名词解释"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">名词解释</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#在电脑本地搭建网站"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">在电脑本地搭建网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#搭建本地环境"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">搭建本地环境</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装nodejs"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">安装Node.js</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装git"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">安装Git</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#在本地安装博客"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">在本地安装博客</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装hexo"><span class="toc-nav-number">4.2.1.</span> <span class="toc-nav-text">安装Hexo</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置hexo"><span class="toc-nav-number">4.2.2.</span> <span class="toc-nav-text">配置Hexo</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#在本地调试博客"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">在本地调试博客</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装本地服务器"><span class="toc-nav-number">4.3.1.</span> <span class="toc-nav-text">安装本地服务器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#本地调试博客"><span class="toc-nav-number">4.3.2.</span> <span class="toc-nav-text">本地调试博客</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#将本地搭好的网站部署到github"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">将本地搭好的网站部署到Github</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置github"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">配置Github</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置git"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">配置Git</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置博客yml文件"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">配置博客yml文件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#部署博客"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">部署博客</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#后记"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">后记</span></a></li></ol>
         
         </div>
       </aside>
