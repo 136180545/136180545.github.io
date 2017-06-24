@@ -216,16 +216,21 @@
 <hr>
 <p>相信很多同学都曾想过搭建一个属于自己的博客网站，闲暇时写一写博客，我很早就想搭建一个自己的博客网站了，起初是想自己写代码开发一个，后来发现成本实在太高，不仅需要时间，还要过硬的开发技术。直到有一天，我遇到了Hexo这个开源的博客框架，如获至宝，于是便迅速着手开始搭建。可能是我把这件事想的太简单了，过程中遇到了无数个坑，折腾了许久才最终完成。</p>
 <p>不得不说，我自己还稍有一点开发基础，但在使用Hexo搭建博客的过程中，有很多新概念也是第一次接触到，有很多问题也是摸索了很久才找到解决方法。作为一款开源框架，Hexo是非常优秀的，但对他的使用者来说却并不友好，我大概遍历了一下网上能够找到的教程，发现即使很多有软件开发功底的同学也是碰到了不少坑，各种奇奇怪怪的坑，把大家折腾的怪难受的。这只能说Hexo的产品化程度还不够高，用户体验有待完善。</p>
+<h2 id="适用人群">适用人群</h2>
+<hr>
 <p>在我将自己的博客搭好之后，决定写下教程，希望能让后来有兴趣搭建博客的同学少走一些弯路。本篇教程分为三篇，分阶段去达成我们的目标。<br>
-我会将教程写的非常详细，主要面向0基础的同学，甚至连Hexo是什么都不了解的同学也能通过本教程的学习最终能成功搭建自己的个人博客。</p>
+我会将教程写的非常详细，主要面向0基础的同学，甚至连Hexo是什么都不了解的同学也能通过本教程的学习最终能成功搭建自己的个人博客。有基础的同学，或者希望快速搭建的同学，可以去搜索其他简明的教程或者查看官方文档<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo官方文档</a></p>
+<h2 id="其他教程">其他教程</h2>
+<hr>
 <p>闲话少叙，如果你是已经成功搭建了博客，可以参看第二、三篇文章对自己的博客进行优化：</p>
-<blockquote>
-<p><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第二篇】</a></p>
-<p><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第二篇】</a></p>
-</blockquote>
+<ul>
+<li><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第二篇】</a></li>
+<li><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第三篇】</a></li>
+<li><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第四篇】</a></li>
+</ul>
 <h1 id="教程宗旨">教程宗旨</h1>
 <hr>
-<p>本教程是我自己在搭建过程中遇到问题，解决问题的过程。作为第一版本的教程，他是不完善的，也不会面面俱到，当然会有很多需要完善的地方，针对这一点我之后会找到很多小白同学，尤其是没有软件基础知识的同学，让他们按照本教程一步步去实践，我会在过程中不断询问他们的意见，接收用户的反馈，不断优化完善，提升阅读的体验，最终迭代升级为一个具有普适意义的教程。同时也希望更多的同学能够通过本教程搭建自己的个人博客网站，一起学习知识、分享经验。</p>
+<p>本教程是我自己在搭建过程中遇到问题，解决问题的过程。作为第一版本的教程，他是不完善的，也无法面面俱到，对于这些不完善的地方，我之后会找到很多小白同学，尤其是没有任何软件基础知识的同学，让他们按照本教程一步步去实践，我会在过程中不断询问他们的意见，接收用户的反馈，不断优化完善，提升阅读的体验，最终迭代升级为一个具有普适意义的教程，让更多非专业的同学能够借助此教程搭建自己的博客网站，一起学习知识、分享经验。</p>
 <h1 id="名词解释">名词解释</h1>
 <hr>
 <p>对于没有软件基础知识的同学，首先要明确一些基本概念，就是接下来用到的这些工具是什么。你也可以先不急着看这个部分，等到后面的安装中有不理解的时候，再回过头来查阅。<br>
@@ -240,12 +245,12 @@
 <p>这里可简单理解为一台云服务器，我们可以把自己博客网站的代码部署在上面，二十四小时不停地运行，让别人可以访问你的博客</p>
 </blockquote>
 <p><strong>3.Git</strong><br>
-Git是一款免费、开源的分布式版本控制系统</p>
+Git是一款免费、开源的分布式版本控制系统。</p>
 <blockquote>
 <p>这里可简单理解为搬运工，帮我们从Github云服务器上把Hexo搬到自己的电脑上，等你把Hexo在自己的电脑上配置好以后，再帮你搬到Github</p>
 </blockquote>
 <p><strong>4.Node.js</strong><br>
-Node.js是JavaScript代码的运行环境，基于chrome V8引擎</p>
+Node.js是JavaScript代码的运行环境，基于chrome V8引擎。</p>
 <blockquote>
 <p>这里可将整个网站代码整体理解成一列火车，火车只能在铁轨上运行，Node.js就相当于那一条铁轨</p>
 </blockquote>
@@ -254,21 +259,111 @@ Node.js是JavaScript代码的运行环境，基于chrome V8引擎</p>
 <p>首先要将博客网站在你自己的电脑上安装好，并调试好，成功以后再将本地安装好的网站部署到云服务器上，也就是github上。博客网站就是一个小软件，任何人想要查看的时候都可以通过浏览器的域名从云端的服务器上载入这个程序，这样就可以很方便的从电脑和手机上看到你的网站了。</p>
 <p>这里我以 <code>Windows 64位</code> 的系统为例讲解如何在电脑本地搭建（注：下面所提供的软件下载地址都是64位的软件）。</p>
 <h2 id="搭建本地环境">搭建本地环境</h2>
+<hr>
 <p>本地环境搭建需要安装两个软件：Node.js+Git<br>
 这两款软件在Windows系统上都是客户端，安装方法就是不断的点击下一步，直到安装成功。</p>
 <h3 id="安装nodejs">安装Node.js</h3>
+<hr>
 <ul>
 <li><a href="http://pan.baidu.com/s/1jIbuV9G" target="_blank" rel="external">下载地址：node-v6.10.3-x64.msi</a></li>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">官方下载下载地址</a><br>
-安装方法非常简单，一路点击下一步，默认安装在C盘，不用修改安装的位置，文件本身不大，只有12M。如下图所示；<br>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="external">官方下载地址</a></li>
+</ul>
+<p>安装方法非常简单，一路点击下一步，默认安装在C盘，不用修改安装的位置，文件本身不大，只有12M。如下图所示：<br>
 <img src="http://orc7nt6tu.bkt.clouddn.com/1-node-01.PNG" alt="Node.js安装过程截图"><br>
 安装完成以后，检查是否真的安装成功。<code>Win+R</code>快捷键调出运行窗口，在运行窗口中输入 <code>cmd</code> ，如下图所示:<br>
 <img src="http://orc7nt6tu.bkt.clouddn.com/1-node-02.PNG" alt="运行命令窗口截图"><br>
-在输入 <code>cmd</code> 敲击回车键以后，则会出现命令行操作的窗口，此时需要在命令行窗口中先后输入两个命令：</li>
-</ul>
+在输入 <code>cmd</code> 敲击回车键以后，则会出现命令行操作的窗口，此时需要在命令行窗口中先后输入两个命令，输入命令后敲击回车即可执行命令，注意命令里面的空格：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">node</span> <span class="bullet">-v</span></div><div class="line"><span class="string">npm</span> <span class="bullet">-v</span></div></pre></td></tr></table></figure>
 <p>分别出现如下图中所示的 <code>v6.10.3</code> 及 <code>3.10.10</code> 的版本号，说明安装成功，如果没有出现，请重复以上过程直到安装成功：<br>
 <img src="http://orc7nt6tu.bkt.clouddn.com/1-node-03.PNG" alt="cmd命令窗口截图"></p>
+<h3 id="安装git">安装Git</h3>
+<hr>
+<ul>
+<li><a href="http://pan.baidu.com/s/1pKITRq7" target="_blank" rel="external">下载地址：Git-2.13.0-64-bit</a></li>
+<li><a href="https://git-scm.com/downloads" target="_blank" rel="external">官方下载地址</a></li>
+</ul>
+<p>安装方法与Node.js一样，一路执行下一步即可，安装在C盘即可，下图即为安装截图页面：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-git-01.PNG" alt="Git安装过程截图1"><br>
+安装到如下步骤时请按照下图进行选择：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-git-02.PNG" alt="Git安装过程截图2"><br>
+在安装到如下页面的步骤时，出于将来操作方便的考虑，请按照下图选择：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-git-03.PNG" alt="Git安装过程截图3"><br>
+安装完成以后我们检查一下是否安装成功，按照上面所提到的方法，使用 <code>cmd</code> 调用Windows命令窗口，输入如下命令：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">git</span> <span class="bullet">--version</span></div></pre></td></tr></table></figure>
+<p>出现如下图中所示的 <code>git version 2.13.0.windows.1</code> 的版本号，说明安装成功，如果没有出现，请重复以上过程直到安装成功：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-git-04.PNG" alt="cmd命令窗口截图2"><br>
+安装成功以后，我们首次体验一下git，在桌面上双击git的快捷图标，就会出现如下的命令窗口：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-git-01.PNG" alt="Git安装过程截图4"><br>
+Git目前是世界上最先进的版本控制系统，之后的过程我们会在这个窗口内输入各种各样的命令来完成我们接下来的步骤。Git就像一个会记账的搬运工，连接了你的电脑和你的服务器，帮你来回之间搬运代码。不会用git的同学也不用担心，接下来的使用过程会非常简单，不需要像程序员们那么专业的操作。</p>
+<p>那么到目前为止，本地环境的搭建就完成了，是不是很简单呢？</p>
+<h2 id="在本地安装博客">在本地安装博客</h2>
+<hr>
+<p>这个时候我们需要将博客安装在本地，在本地进行调试和配置，安装的过程非常简单，就是使用git的命令来进行控制。</p>
+<h3 id="安装hexo">安装Hexo</h3>
+<hr>
+<p>1.在你电脑除C盘以外的其他盘，比如D盘，新建一个文件夹，命名为 <code>Hexo</code><br>
+2.进入到此文件夹里面，鼠标右击选择 <code>Git Bash Here</code> ，此时便在此文件夹下打开了Git命令窗口，截图如下：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-hexo-01.PNG" alt="Hexo安装过程截图1"><br>
+3.在命令窗口中美元符号后面输入如下命令，注意命令的格式，尤其是空格，入完成以后敲击回车键：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">npm</span> <span class="string">install</span> <span class="bullet">-g</span> <span class="string">hexo</span> <span class="bullet">-cli</span></div></pre></td></tr></table></figure>
+<p><img src="http://orc7nt6tu.bkt.clouddn.com/1-hexo-02.PNG" alt="Hexo安装过程截图2"><br>
+此时你只需要耐心等待就行，因为Hexo的存放在Github上，而Github是国外的网站，访问速度会非常缓慢，尤其是从网站上载入一些文件到本地的电脑上。那么安装好的截图如下：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-hexo-03.PNG" alt="Hexo安装过程截图3"><br>
+4.现在检查一下是否安装成功，在刚刚Git的命令窗口内接着输入一下命令：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">hexo</span> <span class="bullet">-v</span></div></pre></td></tr></table></figure>
+<p>如果成功出现如下截图，则说明安装成功，如果没有，则需要你重新执行安装命令：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-hexo-04.PNG" alt="Hexo安装过程截图4"><br>
+Tips：这里的安装过程是很容易掉到坑里去的，虽然安装只是执行一句简单的命令，但有的同学会发现怎么安装都没反应，就是出现不了成功安装的界面，安装过程中要保持耐心，可能每个人遇到的问题都不一样，这里的坑只能依据你的git窗口给出的提示来做相应的处理，如果遇到实在无法处理的情况，可以在文末扫码加入我创建的一个微信群，可以在群里提问。</p>
+<h3 id="配置hexo">配置Hexo</h3>
+<hr>
+<p>安装好了的Hexo并不能直接使用，此时我们需要进行简单的配置：<br>
+1.接着在Git的命令窗口中执行如下命令，进行Hexo的初始化，Hexo将会在你创建的 <code>Hexo</code> 文件夹下面新建所需要的文件：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">hexo</span> <span class="string">init</span></div></pre></td></tr></table></figure>
+<p>此时也要耐心等待，从github上clone项目文件需要时间，成功clone后会出现以下界面：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-hexo-05.PNG" alt="Hexo安装过程截图5"><br>
+同时也会发现你自建的 <code>Hexo</code> 文件夹下也出现了这样一些文件，如果没有出现，请确定上面的步骤是否操作成功：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-hexo-06.PNG" alt="Hexo安装过程截图6"><br>
+2.接着在Git的命令窗口中执行如下命令，使用npm的方式进行安装初始化：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">hexo</span> <span class="string">install</span></div></pre></td></tr></table></figure>
+<p>安装过程较慢，成功以后会出现以下界面：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-hexo-07.PNG" alt="Hexo安装过程截图7"><br>
+这里其实是有个坑的，请确保安装成功，如果安装不成功，本地调试的时候会出现 <code>cannot get</code><br>
+到此Hexo的安装过程就完成了，似乎也不难，不过我当初在搭建的时候就是状况百出，说到底还是对一些新工具，新概念的不熟悉，也到问题的时候就不知道怎么解决而已。</p>
+<h2 id="在本地调试博客">在本地调试博客</h2>
+<hr>
+<p>此时该看看我们安装好的博客是什么样子了，在进行一些本地服务器的配置以后，就可以看到初始状态下的博客啦。</p>
+<h3 id="安装本地服务器">安装本地服务器</h3>
+<hr>
+<p>Hexo 3.0把服务器独立成了一个单独模块，要想在本地预览和调试，需要先安装 <code>hexo-server</code><br>
+继续在git的窗口中执行以下命令：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-server</span> <span class="bullet">--save</span></div></pre></td></tr></table></figure>
+<p>出现如下截图说明安装成功，如果没有安装成功，请重复执行一下上面的命令：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-hexo-08.PNG" alt="Hexo安装过程截图8"></p>
+<h3 id="本地调试博客">本地调试博客</h3>
+<hr>
+<p>1.首先在git的命令窗口中执行以下命令，用以生成博客的静态文件：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">hexo</span> <span class="string">g</span></div></pre></td></tr></table></figure>
+<p>2.完成之后继续执行如下命令：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">hexo</span> <span class="string">s</span></div></pre></td></tr></table></figure>
+<p>成功执行，则会出现如下截图：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-hexo-09.PNG" alt="Hexo安装过程截图9"><br>
+3.在你电脑的浏览器中的地址栏输入 <code>localhost：4000</code> ，一切顺利的话，你将看到博客的初始状态如下图：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/1-hexo-10.PNG" alt="Hexo安装过程截图10"><br>
+第一篇博文是默认的Hello world。</p>
+<p>这里需要注意的是可能你的电脑的4000端口已被占用，常见的占用4000端口的软件有福昕阅读器，此时你只要切换一个端口就行了，执行以下命令可以切换端口为5000：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">hexo</span> <span class="string">server</span> <span class="bullet">-p</span> <span class="number">5000</span></div></pre></td></tr></table></figure>
+<p>在浏览器的地址栏中输入 <code>localhost：5000</code> 就可以看到你的博客页面了。</p>
+<h1 id="后记">后记</h1>
+<hr>
+<p>到此为止，我们就完成了本地博客的安装，这里我们仅仅只是在你自己的电脑上装好了博客网站，第二篇将教会大家如何将网站部署到云服务器，也就是github上，让每个人都能访问你的博客。</p>
+<ul>
+<li><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第二篇】</a></li>
+</ul>
+<p>总结一下之后将会常用到的本地调试步骤：<br>
+之后频繁更新博客的文章，那么在文章发布之前我们需要在本地的电脑上预览一下博客写出来的效果，就需要频繁的用到下列步骤：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">hexo</span> <span class="string">clean</span>     <span class="string">//清除缓存</span></div><div class="line"><span class="string">hexo</span> <span class="string">g</span>         <span class="string">//生成静态文件</span></div><div class="line"><span class="string">hexo</span> <span class="string">s</span>         <span class="string">//启动本地服务器</span></div></pre></td></tr></table></figure>
+<p>如有更多的问题，请添加下面的QQ群交流：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/Hexo%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="github配置过程截图13"></p>
 
 
 
@@ -276,10 +371,6 @@ Node.js是JavaScript代码的运行环境，基于chrome V8引擎</p>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                    
-                        <li class="next">
-                            <a href="/2017/03/18/hexo-theme-beantech/" data-toggle="tooltip" data-placement="top" title="[Hexo] Theme BeanTech">Next Post &rarr;</a>
-                        </li>
                     
                 </ul>
 
@@ -308,7 +399,7 @@ Node.js是JavaScript代码的运行环境，基于chrome V8引擎</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#写在前面"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#教程宗旨"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">教程宗旨</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#名词解释"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">名词解释</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#在电脑本地搭建网站"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">在电脑本地搭建网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#搭建本地环境"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">搭建本地环境</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装nodejs"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">安装Node.js</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#写在前面"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#适用人群"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">适用人群</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其他教程"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">其他教程</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#教程宗旨"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">教程宗旨</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#名词解释"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">名词解释</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#在电脑本地搭建网站"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">在电脑本地搭建网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#搭建本地环境"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">搭建本地环境</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装nodejs"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">安装Node.js</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装git"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">安装Git</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#在本地安装博客"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">在本地安装博客</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装hexo"><span class="toc-nav-number">4.2.1.</span> <span class="toc-nav-text">安装Hexo</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置hexo"><span class="toc-nav-number">4.2.2.</span> <span class="toc-nav-text">配置Hexo</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#在本地调试博客"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">在本地调试博客</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装本地服务器"><span class="toc-nav-number">4.3.1.</span> <span class="toc-nav-text">安装本地服务器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#本地调试博客"><span class="toc-nav-number">4.3.2.</span> <span class="toc-nav-text">本地调试博客</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#后记"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">后记</span></a></li></ol>
         
         </div>
       </aside>
