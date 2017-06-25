@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          曹威的博客 | 和你一起学习、思考、成长
+          如何使用Hexo搭建自己的博客网站【第二篇】 - 曹威的博客 | 和你一起学习、思考、成长
         
     </title>
 
-    <link rel="canonical" href="http://caowei.co/404.html">
+    <link rel="canonical" href="http://caowei.co/2017/06/25/如何使用Hexo搭建个人博客网站【第二篇】/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,8 +69,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/404-bg.jpg')
-            /*page*/
+            background-image: url('http://orc7nt6tu.bkt.clouddn.com/header.jpg')
+            /*post*/
         
     }
     
@@ -83,10 +83,20 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="site-heading">
-                        <h1>CAOWEI</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">你来到了没有知识的荒原 :(</span>
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+                            
+                              <a class="tag" href="/tags/#博客" title="博客">博客</a>
+                            
+                        </div>
+                        <h1>如何使用Hexo搭建自己的博客网站【第二篇】</h1>
+                        <h2 class="subheading">人人都能学会的自建博客网站教程</h2>
+                        <span class="meta">
+                            Posted by Caowei on
+                            2017-06-25
+                        </span>
                     </div>
                 
 
@@ -189,25 +199,208 @@
 
 
     <!-- Main Content -->
-    
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/404-bg.jpg')">
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>404</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">你来到了没有知识的荒原 :(</span>
-                </div>
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1 id="写在前面">写在前面</h1>
+<hr>
+<p>第一篇教程中，我们成功的在电脑本地搭建了博客并部署到了github，但这仅仅只是走完了搭建的流程，相信很多同学对Hexo自带的主题，也就是所谓的皮肤并不满意，那么在github上有很多免费的优质主题，本篇教程将教大家安装并配置几个常见的主题。</p>
+<h2 id="其他教程">其他教程</h2>
+<hr>
+<ul>
+<li><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第一篇】</a></li>
+<li><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第三篇】</a></li>
+</ul>
+<h1 id="主题推荐">主题推荐</h1>
+<hr>
+<p>Hexo官方收录了很多主题，大家可以进去挑选<a href="https://hexo.io/themes/" target="_blank" rel="external">官方主题</a></p>
+<blockquote>
+<p>友情提示：<br>
+虽说Hexo有这么多主题，但每个主题并不是那么的好用，暗藏了很多坑。很多主题看起来非常漂亮，用起来也很爽，但由于主题的作者长时间没有进行维护升级，导致有很多bug，这对于没有编程能力的同学来说是非常不利的；还有很多主题，在电脑上看起来真的很不错，可用手机来访问的时候，页面就乱了，说明这些主题并没有对移动端做适配，也是不友好的；还有些主题，与之相关的教程非常少，摸索很久也无法成功进行配置，那些也不适合。所以说，选择一个，既美观又实用，更新维护方便的主题才是明智的决策，并不是大家自己最喜欢的就是最好的。</p>
+</blockquote>
+<p>给大家推荐几款主题（这里给出的是作者博客的地址而非github的仓库地址）：</p>
+<ul>
+<li><a href="http://notes.iissnan.com/" target="_blank" rel="external">next</a><br>
+最受欢迎的主题，也是被使用最多，教程也最多，性能最好的。主要看使用者是否喜欢这种风格，网上关于此主题的配置教程非常多也非常详细。</li>
+<li><a href="http://notes.iissnan.com/" target="_blank" rel="external">Yelee</a><br>
+从yilia优化而来，作者自己写了详细的教程，最适合小白用户使用。界面的风格等都可以依据作者的教程进行修改。</li>
+<li><a href="http://litten.me/" target="_blank" rel="external">yilia</a><br>
+主题非常漂亮，我最开始也是想用这款主题的。自从使用了ES6以后，对于6.1版本的Node.js就不支持了，我们之前安装的都是6.1的Node.js，所以不太建议用了。</li>
+<li><a href="http://beantech.org/" target="_blank" rel="external">BeanTech</a><br>
+这款主题也是我目前正在用的主题，作者有写使用的教程，但不是很详细，但后来我自己修改了很多配置，本篇教程就告诉大家如何配置这个主题。</li>
+<li><a href="http://haojen.github.io/" target="_blank" rel="external">Anisina</a><br>
+这款主题也是非常好用，作者写的教程非常详细，推荐大家使用。</li>
+</ul>
+<p>还有其他几款几款主题的风格我自己也挺喜欢的，只不过很难找到详细的使用教程，要靠自己慢慢摸索，比较花费时间：</p>
+<ul>
+<li><a href="https://d2fan.com/" target="_blank" rel="external">Frost</a><br>
+简约到只剩下文字，阅读体验非常好，让读者把更多的注意力集中在内容上。</li>
+<li><a href="https://www.haomwei.com/" target="_blank" rel="external">Maupassant</a><br>
+我当初最想用的就是这款主题了，有点像报纸的那种风格，但这款主题对移动端的适配不是很好，于是便放弃了。</li>
+</ul>
+<p>下面列举一些很有设计风格的博客，大家有兴趣的可以尝试一下：</p>
+<ul>
+<li><a href="https://html5up.net/" target="_blank" rel="external">HTML5 UP</a></li>
+<li><a href="http://xwartz.xyz/blog/" target="_blank" rel="external">xwartz</a></li>
+<li><a href="https://sharvaridesai.gitlab.io/hexo-theme-standrews/" target="_blank" rel="external">sharvaridesai</a></li>
+<li><a href="https://www.moumaobuchiyu.com/" target="_blank" rel="external">moumaobuchiyu</a></li>
+<li><a href="http://justpsvm.com/hexo-theme-varaint/" target="_blank" rel="external">justpsvm</a></li>
+<li><a href="https://blog.hinpc.com/" target="_blank" rel="external">hinpc</a></li>
+</ul>
+
+
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2017/06/23/如何使用Hexo搭建个人博客网站【第一篇】/" data-toggle="tooltip" data-placement="top" title="如何使用Hexo搭建自己的博客网站【第一篇】">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
+                <!-- disqus comment end -->
+            </div>
+
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#写在前面"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其他教程"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">其他教程</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#主题推荐"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">主题推荐</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+                        
+                          <a class="tag" href="/tags/#博客" title="博客">博客</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://tuchong.com/" target="_blank">图虫</a></li>
+                    
+                        <li><a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a></li>
+                    
+                        <li><a href="http://www.jianshu.com/" target="_blank">简书</a></li>
+                    
+                        <li><a href="http://www.gooood.hk/" target="_blank">谷德设计网</a></li>
+                    
+                </ul>
+                
             </div>
         </div>
     </div>
-</header>
+</article>
 
-<script>
-    document.body.classList.add('page-fullscreen');
+
+
+
+<!-- disqus embedded js code start (one page only need to embed once) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "your-disqus-ID";
+    var disqus_identifier = "http://caowei.co/2017/06/25/如何使用Hexo搭建个人博客网站【第二篇】/";
+    var disqus_url = "http://caowei.co/2017/06/25/如何使用Hexo搭建个人博客网站【第二篇】/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 </script>
+<!-- disqus embedded js code start end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: ''
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
