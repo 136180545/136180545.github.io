@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          如何使用Hexo搭建自己的博客网站【第二篇】 - 曹威的博客 | 和你一起学习、思考、成长
+          如何使用Hexo搭建自己的博客网站【第三篇】 - 曹威的博客 | 和你一起学习、思考、成长
         
     </title>
 
-    <link rel="canonical" href="http://caowei.co/2017/06/25/如何使用Hexo搭建个人博客网站【第二篇】/">
+    <link rel="canonical" href="http://caowei.co/2017/06/27/如何使用Hexo搭建个人博客网站【第三篇】/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -91,11 +91,11 @@
                               <a class="tag" href="/tags/#博客" title="博客">博客</a>
                             
                         </div>
-                        <h1>如何使用Hexo搭建自己的博客网站【第二篇】</h1>
+                        <h1>如何使用Hexo搭建自己的博客网站【第三篇】</h1>
                         <h2 class="subheading">人人都能学会的自建博客网站教程</h2>
                         <span class="meta">
                             Posted by Caowei on
-                            2017-06-25
+                            2017-06-27
                         </span>
                     </div>
                 
@@ -214,49 +214,85 @@
 
                 <h1 id="写在前面">写在前面</h1>
 <hr>
-<p>第一篇教程中，我们成功的在电脑本地搭建了博客并部署到了github，但这仅仅只是走完了搭建的流程，相信很多同学对Hexo自带的主题，也就是所谓的皮肤并不满意，那么在github上有很多免费的优质主题，本篇教程将教大家安装并配置几个常见的主题。</p>
+<p>第二篇教程中，我们成功的配置了博客的主题，拥有了自己个性化的色彩。但这还不够，怎样书写并发布博客，怎样维护自己的博客，能不能拥有自己的个性域名，等等。本篇文章就主要讲述如何优化和维护自己的博客。</p>
 <h2 id="其他教程">其他教程</h2>
 <hr>
 <ul>
-<li><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第一篇】</a></li>
-<li><a href="http://" target="_blank" rel="external">如何使用Hexo搭建自己的博客网站【第三篇】</a></li>
+<li><a href="http://caowei.co/2017/06/23/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E3%80%90%E7%AC%AC%E4%B8%80%E7%AF%87%E3%80%91/">如何使用Hexo搭建自己的博客网站【第一篇】</a></li>
+<li><a href="http://caowei.co/2017/06/25/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E3%80%90%E7%AC%AC%E4%BA%8C%E7%AF%87%E3%80%91/">如何使用Hexo搭建自己的博客网站【第二篇】</a></li>
 </ul>
-<h1 id="主题推荐">主题推荐</h1>
+<h1 id="书写并发布博客">书写并发布博客</h1>
 <hr>
-<p>Hexo官方收录了很多主题，大家可以进去挑选<a href="https://hexo.io/themes/" target="_blank" rel="external">官方主题</a></p>
-<blockquote>
-<p>友情提示：<br>
-虽说Hexo有这么多主题，但每个主题并不是那么的好用，暗藏了很多坑。很多主题看起来非常漂亮，用起来也很爽，但由于主题的作者长时间没有进行维护升级，导致有很多bug，这对于没有编程能力的同学来说是非常不利的；还有很多主题，在电脑上看起来真的很不错，可用手机来访问的时候，页面就乱了，说明这些主题并没有对移动端做适配，也是不友好的；还有些主题，与之相关的教程非常少，摸索很久也无法成功进行配置，那些也不适合。所以说，选择一个，既美观又实用，更新维护方便的主题才是明智的决策，并不是大家自己最喜欢的就是最好的。</p>
-</blockquote>
-<p>给大家推荐几款主题（这里给出的是作者博客的地址而非github的仓库地址）：</p>
+<p>博客搭建好了，是需要持续不断的写文章发布在上面的，否则博客的搭建就失去了意义。Hexo然书写和发布的过程非常简单，只需要掌握一定的书写规则和几条常用的git命令即可，下面我们就介绍一下如何书写并发布。</p>
+<h2 id="书写文章">书写文章</h2>
+<hr>
+<p>Hexo的博客书写支持Markdown，Mardown的语法简单易学，用一些简单的标签即可让文章有非常好的呈现效果。<br>
+想要在博客上轻松自如的书写并发布文章，Markdown语法是必须要学会的，没有接触过Markdown的同学也不用太担心，因为语法本身非常简单，我们也只需要掌握最基本的就行。熟练使用Markdown能让写作的效率变得非常高，好处是显而易见，我在这里就只是向搭建推荐几个教程以及需要掌握的重点：</p>
 <ul>
-<li><a href="http://notes.iissnan.com/" target="_blank" rel="external">next</a><br>
-最受欢迎的主题，也是被使用最多，教程也最多，性能最好的。主要看使用者是否喜欢这种风格，网上关于此主题的配置教程非常多也非常详细。</li>
-<li><a href="http://notes.iissnan.com/" target="_blank" rel="external">Yelee</a><br>
-从yilia优化而来，作者自己写了详细的教程，最适合小白用户使用。界面的风格等都可以依据作者的教程进行修改。</li>
-<li><a href="http://litten.me/" target="_blank" rel="external">yilia</a><br>
-主题非常漂亮，我最开始也是想用这款主题的。自从使用了ES6以后，对于6.1版本的Node.js就不支持了，我们之前安装的都是6.1的Node.js，所以不太建议用了。</li>
-<li><a href="http://beantech.org/" target="_blank" rel="external">BeanTech</a><br>
-这款主题也是我目前正在用的主题，作者有写使用的教程，但不是很详细，但后来我自己修改了很多配置，本篇教程就告诉大家如何配置这个主题。</li>
-<li><a href="http://haojen.github.io/" target="_blank" rel="external">Anisina</a><br>
-这款主题也是非常好用，作者写的教程非常详细，推荐大家使用。</li>
+<li><a href="http://www.jianshu.com/p/38fe4911b4a0" target="_blank" rel="external">八分钟学会Markdown</a></li>
+<li><a href="http://www.appinn.com/markdown/" target="_blank" rel="external">Markdown官方语法教程</a></li>
 </ul>
-<p>还有其他几款几款主题的风格我自己也挺喜欢的，只不过很难找到详细的使用教程，要靠自己慢慢摸索，比较花费时间：</p>
+<p>官方语法教程很长，而且我们常用的Markdown语法标签不多，有兴趣钻研的同学可以深入去学习一下。建议大家学习第一篇，常用的都讲到了，而且可以看到生成文章后的样式。</p>
+<p>我自己常用的Markdown编辑器是<a href="http://pan.baidu.com/s/1c1YP2uO" target="_blank" rel="external">Atom</a>，也是github官方发布的一个代码编辑器，平时主要用来写写代码，关键是它支持Markdown。其他的Markdown编辑器也有很多，像印象笔记，有道云笔记等，在笔记类应用里面写是非常好的习惯，随时同步，算是一个云备份。Markdown编辑器生成的文件格式为 <code>.md</code> 的格式，我们发布文章也是把这个文件更新到服务器就行。</p>
+<h2 id="发布文章">发布文章</h2>
+<hr>
+<p>发布文章只需要使用Git的几个命令就行，只需要把 <code>.md</code> 文章文件放到我们本地文件的指定文件夹下面即可 <code>Hexo\source\_posts</code> 我经常的习惯是这样，先新建一个 <code>.md</code> 的文件，放到 <code>Hexo\source\_posts</code> 文件夹下，然后用编辑器直接打开，开始书写文章，边写边预览写出来的效果，做法也很简单，就是用的本地调试的命令：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">hexo</span> <span class="string">clean</span></div><div class="line"><span class="string">hexo</span> <span class="string">g</span></div><div class="line"><span class="string">hexo</span> <span class="string">s</span></div></pre></td></tr></table></figure>
+<p>然后打开浏览器，写完一段保存一下，在浏览器那边刷新就能实时看到文章呈现的效果。<br>
+部署文章就更简单了，把写完的文章保存，本地预览觉得没有问题了以后，使用Git执行下列命令：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">hexo</span> <span class="string">clean</span></div><div class="line"><span class="string">hexo</span> <span class="string">g</span></div><div class="line"><span class="string">hexo</span> <span class="string">d</span></div></pre></td></tr></table></figure>
+<p>文章直接就被更新到了github，重新打开浏览器输入你博客的网站，立即就能看到你刚刚写的文章。<br>
+修改文章只需要修改 <code>.md</code> 文件就行，修改完成后再次执行上面的命令发布。</p>
+<h1 id="绑定个性域名">绑定个性域名</h1>
+<hr>
+<p>github官方给你的网页的域名很长，而且还带着 <code>.github.io</code> 的后缀，所以很多同学都想绑定自己的域名，博客的域名大多是以自己姓名的拼音组成，github pages也支持域名的绑定，那么只要能成功绑定，便能通过自己的个性域名访问自己网站了。</p>
+<h2 id="购买域名">购买域名</h2>
+<hr>
+<p>首先要购买属于自己的域名，购买域名一般去阿里云旗下的<a href="https://wanwang.aliyun.com/?utm_medium=text&amp;utm_source=bdbrandww&amp;utm_campaign=bdbrand&amp;utm_content=se_103066" target="_blank" rel="external">万网</a>，当然也可以去百度云或者腾讯云等网站去购买。<br>
+简单说一下怎么购买域名，首先要注册阿里云的账户，然后查询自己的域名是否存在<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/3-yuming-01.png" alt="域名绑定截图1"><br>
+找到自己需要的域名即可点击购买，这里要说明的是，注册阿里云账号时记得实名认证一下，没有实名认证的用户是不能使用域名的，填写好相关信息购买即可，如下图：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/3-yuming-02.png" alt="域名绑定截图2"><br>
+付款成功以后从阿里云控制台进入域名管理页面，如下图：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/3-yuming-03.png" alt="域名绑定截图3"><br>
+我这里刚买的域名还没有进行实名认证，首先需要实名认证一下：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/3-yuming-04.png" alt="域名绑定截图4"></p>
+<h2 id="绑定域名">绑定域名</h2>
+<hr>
+<p>等待审核通过的时间不会很长，审核通过以后，域名需要解析才能使用，点击域名解析：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/3-yuming-05.png" alt="域名绑定截图5"><br>
+首次使用域名解析需要输入你博客的IP地址，我们可以使用 <code>cmd</code> Windows的命令窗口ping出你博客的IP地址，在命令窗口中输入如下命令：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">ping</span> <span class="string">yoursite.github.io</span></div></pre></td></tr></table></figure>
+<p><img src="http://orc7nt6tu.bkt.clouddn.com/3-yuming-06.png" alt="域名绑定截图6"><br>
+将ping出来的IP地址填入阿里云解析，阿里云解析现在非常智能，当你解析完成以后会自动添加了 <code>@</code> <code>www</code> 这另种解析类型，另外还要再添加一个CNAME的映射类型，也是指向博客的IP：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/3-yuming-07.png" alt="域名绑定截图7"><br>
+到此便完成了域名服务商这边的解析，但还有步更加重要，我们需要在 <code>Hexo\source\</code> 文件夹里面添加一个<a href="http://pan.baidu.com/s/1nvhuEJv" target="_blank" rel="external">CNAME</a>的文件，文件没有后缀，但填写你购买的域名，然后使用git将其部署到github上。如果此时你填写的是www.caowei.co那么以后你只能用www.caowei.co访问，而如果你填写的是不带www前缀的，之后无论是否输入www都可以访问，好在现在的浏览器越来越智能了，在访问时会默认帮你加上www</p>
+<p>那么到此，我们便完成了域名和博客的绑定，此时便可以输入你的个性域名去访问你的博客了。</p>
+<h1 id="使用七牛云存储做图床">使用七牛云存储做图床</h1>
+<hr>
+<p>为什么要使用<a href="https://www.qiniu.com/" target="_blank" rel="external">七牛云存储</a>做图床，因为github给大家的免费使用空间只有300M，而文章里面有时会有很多的图片，文章多了以后不仅仅空间不够用，放在github上加载的速度也会变慢，所以我们把图片放在国内的云存储空间上，写博客的时候，只用在Markdown里面插入七牛提供的图片链接就可以了。</p>
+<p>为什么使用七牛，七牛提供了5G的免费空间，每个月有5G的免费流量，用来存储图片绰绰有余。<br>
+我们从注册七牛云开始说起：<br>
+<strong>1.注册并登录七牛云</strong><br>
+首先是按照步骤注册账号，注册时需要实名认证，认证过程还是挺快的：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/3-qiniu-01.PNG" alt="七牛图床1"><br>
+<strong>2.添加对象存储</strong><br>
+按照步骤添加存储空间，添加好以后会自动生成这个空间的域名，这个域名就是之后就是图片地址的前缀：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/3-qiniu-02.png" alt="七牛图床2"><br>
+<strong>3.上传文章的图片</strong><br>
+进入存储空间，添加内容管理，选择上传图片即可<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/3-qiniu-03.png" alt="七牛图床3"><br>
+<strong>4.使用图片</strong><br>
+当你上传完图片以后，每个图片对应产生一个外链，复制外链插入到Markdown里面即可：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/3-qiniu-04.png" alt="七牛图床3"></p>
+<h1 id="后记">后记</h1>
+<hr>
+<p>到此，关于博客的一些基本配置就全部结束了，从第一篇到第三篇，我们完整的讲述了博客网站从搭建到最后配置的整个过程，但其实还有一个问题也非常重要，就是你突然发现，网站有了，内容也有了，但是百度和谷歌的搜索就是搜不到你的网站和你写的文章，那么下篇文章我们就讲述一下如何对网站进行SEO搜索引擎优化。</p>
 <ul>
-<li><a href="https://d2fan.com/" target="_blank" rel="external">Frost</a><br>
-简约到只剩下文字，阅读体验非常好，让读者把更多的注意力集中在内容上。</li>
-<li><a href="https://www.haomwei.com/" target="_blank" rel="external">Maupassant</a><br>
-我当初最想用的就是这款主题了，有点像报纸的那种风格，但这款主题对移动端的适配不是很好，于是便放弃了。</li>
+<li><a href="http://" target="_blank" rel="external">Hexo SEO搜索引擎优化</a></li>
 </ul>
-<p>下面列举一些很有设计风格的博客，大家有兴趣的可以尝试一下：</p>
-<ul>
-<li><a href="https://html5up.net/" target="_blank" rel="external">HTML5 UP</a></li>
-<li><a href="http://xwartz.xyz/blog/" target="_blank" rel="external">xwartz</a></li>
-<li><a href="https://sharvaridesai.gitlab.io/hexo-theme-standrews/" target="_blank" rel="external">sharvaridesai</a></li>
-<li><a href="https://www.moumaobuchiyu.com/" target="_blank" rel="external">moumaobuchiyu</a></li>
-<li><a href="http://justpsvm.com/hexo-theme-varaint/" target="_blank" rel="external">justpsvm</a></li>
-<li><a href="https://blog.hinpc.com/" target="_blank" rel="external">hinpc</a></li>
-</ul>
+<p>如有更多的问题，请添加下面的QQ群交流：<br>
+<img src="http://orc7nt6tu.bkt.clouddn.com/Hexo%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="github配置过程截图13"></p>
 
 
 
@@ -264,13 +300,9 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2017/06/27/如何使用Hexo搭建个人博客网站【第三篇】/" data-toggle="tooltip" data-placement="top" title="如何使用Hexo搭建自己的博客网站【第三篇】">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/2017/06/23/如何使用Hexo搭建个人博客网站【第一篇】/" data-toggle="tooltip" data-placement="top" title="如何使用Hexo搭建自己的博客网站【第一篇】">Next Post &rarr;</a>
+                            <a href="/2017/06/25/如何使用Hexo搭建个人博客网站【第二篇】/" data-toggle="tooltip" data-placement="top" title="如何使用Hexo搭建自己的博客网站【第二篇】">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -300,7 +332,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#写在前面"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其他教程"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">其他教程</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#主题推荐"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">主题推荐</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#写在前面"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其他教程"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">其他教程</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#书写并发布博客"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">书写并发布博客</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#书写文章"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">书写文章</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#发布文章"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">发布文章</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#绑定个性域名"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">绑定个性域名</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#购买域名"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">购买域名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#绑定域名"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">绑定域名</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#使用七牛云存储做图床"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">使用七牛云存储做图床</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#后记"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">后记</span></a></li></ol>
         
         </div>
       </aside>
@@ -357,8 +389,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "your-disqus-ID";
-    var disqus_identifier = "http://caowei.co/2017/06/25/如何使用Hexo搭建个人博客网站【第二篇】/";
-    var disqus_url = "http://caowei.co/2017/06/25/如何使用Hexo搭建个人博客网站【第二篇】/";
+    var disqus_identifier = "http://caowei.co/2017/06/27/如何使用Hexo搭建个人博客网站【第三篇】/";
+    var disqus_url = "http://caowei.co/2017/06/27/如何使用Hexo搭建个人博客网站【第三篇】/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
